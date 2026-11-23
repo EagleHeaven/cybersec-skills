@@ -52,7 +52,7 @@ Options :
 
 Avec la ligne `curl`, les options passent après `bash -s --`, par exemple `... | bash -s -- --core`.
 
-Nos skills vont dans `~/.claude/skills/`. Si une version existe déjà, elle est renommée `*.backup-AAAAMMJJ-HHMMSS`, rien n'est écrasé. Les plugins demandent la commande `claude`. Pour couper les couleurs : `NO_COLOR=1`.
+Nos skills vont dans `~/.claude/skills/`. Si une version existe déjà, elle est déplacée dans `~/.claude/skills-backups/`, rien n'est écrasé. Les plugins demandent la commande `claude`. Pour couper les couleurs : `NO_COLOR=1`.
 
 Ensuite, ouvre une nouvelle session Claude Code.
 
