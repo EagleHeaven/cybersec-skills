@@ -6,7 +6,7 @@ Un kit pour que Claude Code écrive, vérifie et mette à jour du code sans ouvr
 
 Un avis de sécurité publié sur une version de Next.js a bloqué le build d'une vraie application : le build refusait de se terminer, donc aucun déploiement ne pouvait partir. La version était visée par sept avis publiés, tous corrigés dans une version plus récente.
 
-Mettre à jour vite, sans vérifier, peut casser l'app. Ne rien faire laisse une faille ouverte. Ce kit donne à Claude une méthode pour faire les deux dans le bon ordre, et les outils de scan pour voir les problèmes avant qu'ils partent en production :
+Mettre à jour vite, sans vérifier, peut casser l'app. Ne rien faire laisse une faille ouverte. Ce kit donne à Claude une méthode pour faire les deux dans le bon ordre, les outils de scan pour voir les problèmes avant qu'ils partent en production, et la vérification formelle (pstack) pour prouver qu'un parcours ne peut pas casser :
 
 - **`app-audit-upgrade`** : auditer les dépendances et les avis de sécurité, puis mettre à jour dans un worktree Git séparé, avec sauvegarde, vérification des doublons, installation depuis le lockfile, typecheck, lint, tests, build, et un nouvel audit à la fin.
 - **`cybersec-checklist`** : la procédure pour tout changement qui touche l'authentification, les paiements, le chiffrement, les entrées utilisateur, les secrets, les dépendances, les routes publiques ou les données personnelles. Avec une checklist à cocher avant chaque merge.
@@ -22,8 +22,9 @@ Mettre à jour vite, sans vérifier, peut casser l'app. Ne rien faire laisse une
 | plugin `sonatype-guide` | Sonatype | risque d'un paquet avant de l'ajouter |
 | plugin `ai-plugins` | Endor Labs | tri des vulnérabilités, mises à jour, réponse aux malwares |
 | plugin `nightvision` | NightVision | découverte d'API et scans de sécurité de l'app |
+| plugin `pstack` | [cursor/plugins](https://github.com/cursor/plugins/tree/main/pstack) (Lauren Tan) | vérification formelle TLA+, statecharts, vérification de l'app comme un utilisateur, TDD |
 
-Les plugins sont installés depuis la marketplace officielle d'Anthropic, à jour, jamais copiés ici. Certains demandent un compte chez leur éditeur (Cloudflare, Aikido, Sonatype, Endor Labs, NightVision) : Claude Code te demandera de te connecter la première fois que tu t'en sers.
+Les plugins sont installés depuis la marketplace officielle d'Anthropic et celle de Cursor pour pstack, à jour, jamais copiés ici. Certains demandent un compte chez leur éditeur (Cloudflare, Aikido, Sonatype, Endor Labs, NightVision) : Claude Code te demandera de te connecter la première fois que tu t'en sers.
 
 ## Installation
 

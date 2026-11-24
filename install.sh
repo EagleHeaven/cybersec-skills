@@ -32,6 +32,7 @@ PLUGINS=(
   "sonatype-guide@claude-plugins-official|anthropics/claude-plugins-official|dependency risk before you add a package (Sonatype)"
   "ai-plugins@claude-plugins-official|anthropics/claude-plugins-official|vulnerability triage, upgrades, malware response (Endor Labs)"
   "nightvision@claude-plugins-official|anthropics/claude-plugins-official|API discovery and app security scans (NightVision)"
+  "pstack@cursor-plugins|cursor/plugins|formal verification (TLA+), statecharts, app verification, TDD (Lauren Tan)"
 )
 
 # ---- engine (same in every RedEagle01 kit) -----------------------------------
