@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # cybersec-skills installer, by RedEagle01
 #
-#   ./install.sh                      install everything: our skills, partner skills, plugins
+#   ./install.sh                      install everything: our skills and the plugins
 #   ./install.sh --core               install only the skills in this repo
 #   ./install.sh cybersec-checklist   install only the skills you name (from this repo)
 #   ./install.sh --list               list everything this kit installs
@@ -13,8 +13,7 @@
 # Our skills go to ~/.claude/skills (or $CLAUDE_SKILLS_DIR). A skill already
 # there is moved to ~/.claude/skills-backups/<name>-YYYYMMDD-HHMMSS first:
 # nothing is overwritten, and Claude does not load the old copy twice.
-# Partner skills need Node (npx); plugins need the `claude` CLI. NO_COLOR=1
-# turns colors off.
+# Plugins need the `claude` CLI. NO_COLOR=1 turns colors off.
 
 # ---- kit ---------------------------------------------------------------------
 KIT_TAGLINE="cybersec skills for Claude Code, by RedEagle01"
